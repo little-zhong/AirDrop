@@ -16,7 +16,7 @@ mac: ./main --number 10
 
 linux: ./main --number 10
 
-win: ...
+win: .\main.exe --number 10
 
 2、
 cat ./account.json
