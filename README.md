@@ -8,6 +8,8 @@ Sui:
 
 Create Wallet (Batch interaction has been implemented)
 
+![1667295055813](image/README/1667295055813.png)
+
 ```
 1、
 mac: ./main --number 10
