@@ -1,4 +1,4 @@
-# AirDorp
+# AirDrop
 
 区块链空投 Blockchain Airdrop
 
@@ -103,8 +103,6 @@ cat ./account.json
     }
 ]
 ```
-
-
 
 如果你需要项目定制，请联系我!
 
