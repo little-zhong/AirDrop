@@ -4,7 +4,7 @@
 
 Sui:
 
-钱包创建(批量交互已经实现)
+钱包创建(批量交互已经实现)、归集代币
 
 Create Wallet (Batch interaction has been implemented)
 
@@ -16,7 +16,7 @@ mac: ./main --number 10
 
 linux: ./main --number 10
 
-win: ...
+win: .\main.exe --number 10
 
 2、
 cat ./account.json
