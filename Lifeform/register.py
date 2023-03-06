@@ -4,6 +4,7 @@ import asyncio
 from web3 import Web3
 from loguru import logger
 from eth_account.messages import encode_defunct
+from pyuseragents import random as random_useragent
 
 w3 = Web3(Web3.HTTPProvider("https://bsc-dataseed.binance.org"))
 logger.add("log/file_{time:YYYY-MM-DD}.log",
@@ -98,7 +99,14 @@ async def worker(account, num):
     async with num:
         account = account.split("----")
         try:
-            async with httpx.AsyncClient() as client:
+            async with httpx.AsyncClient(
+                headers={
+                    'accept': 'application/json, text/plain, */*',
+                    'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,es;q=0.5',
+                    'content-type': 'application/json',
+                    'user-agent': random_useragent()
+                }
+            ) as client:
                 login_info = await login_wallet(client, account)
                 client.headers.update({'Authorization': login_info[0]})
                 sign_info = await registerSign(client, account)
